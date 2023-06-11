@@ -5,8 +5,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='learn_python',                           # should match the package folder
-    packages=['learn_python'],                   # should match the package folder
+    name='learn_python_ceg_test',                           # should match the package folder
+    packages=['learn_python_ceg_test'],                   # should match the package folder
     version='1.0.0',                              # important for updates
     license='GNU',                                  # should match your chosen license
     description='learn_python check answers',

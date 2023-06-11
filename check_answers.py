@@ -1,5 +1,4 @@
-from math import pi 
-from math import sqrt
+from math import pi,sqrt 
 import pandas as pd
 
 file_location = ("https://raw.githubusercontent.com/TUDelft-CITG/"
