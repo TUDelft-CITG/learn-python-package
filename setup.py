@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setuptools.setup(
     name='learn_python_ceg_test',                           # should match the package folder
     packages=['learn_python_ceg_test'],                   # should match the package folder
-    version='1.0.1',                              # important for updates
+    version='1.0.2',                              # important for updates
     license='GNU',                                  # should match your chosen license
     description='learn_python check answers',
     long_description=long_description,              # loads your README.md
@@ -31,5 +31,5 @@ setuptools.setup(
         'Programming Language :: Python :: 3.9',
     ],
     
-    download_url="https://github.com/mike-mendoza/learn_python_ceg_test/archive/refs/tags/v1.0.1.tar.gz",
+    download_url="https://github.com/mike-mendoza/learn_python_ceg_test/archive/refs/tags/v1.0.2.tar.gz",
 )
