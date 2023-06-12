@@ -1,14 +1,18 @@
 from math import pi,sqrt 
 import pandas as pd
 
-file_location = ("https://raw.githubusercontent.com/TUDelft-CITG/"
-                "learn-python/mike/book/06/Exercises/")
 
 
 ###================== NOTEBOOK 3=====================
-def notebook_3_check_answer(question_number):
+def notebook_3(question_number,arguments):
+    """This function checks the answers for notebook 3.
+    It takes two arguments:
+    - question_number: the question number to check
+    - arguments: a list of arguments to pass to the function"""
 
     if question_number == 0:
+        car_info=arguments[0]
+        message=arguments[1]
         try: 
             assert car_info[
                 'top_speed'] in message and car_info[
@@ -18,6 +22,8 @@ def notebook_3_check_answer(question_number):
             print('Incorrect answer :(')
 
     elif question_number == 1:
+        angle=arguments[0]
+        DegToRad = arguments[1]
         try: 
             assert type(
                 DegToRad) == type(
@@ -29,9 +35,10 @@ def notebook_3_check_answer(question_number):
             print('Incorrect answer :(')
 
     elif question_number == 2:
+        distance=arguments[0]
         try: 
             assert abs(
-                Distance(
+                distance(
                 1, 1, 3, 3) - 2 * sqrt(
                 2)) <= 1e-6, '3.2.2 - Incorrect answer'
             print('Correct answer :D')
@@ -39,6 +46,7 @@ def notebook_3_check_answer(question_number):
             print('Incorrect answer :(')
     
     elif question_number == 3:
+        get_abbreviation=arguments[0]
         try: 
             assert get_abbreviation(   
             ) == "AES", '3.4.1 - Incorrect answer'
@@ -47,6 +55,7 @@ def notebook_3_check_answer(question_number):
             print('Incorrect answer :(')
 
     elif question_number == 4:
+        create_string_from_lists = arguments[0]
         try: 
             assert "B[3] = 8" in create_string_from_lists(
             ), '3.4.2 - Incorrect answer'
@@ -55,6 +64,7 @@ def notebook_3_check_answer(question_number):
             print('Incorrect answer :(')
 
     elif question_number == 5:
+        factorial = arguments[0]
         try: 
             assert factorial(
                 5) == 120, '3.4.3 - Incorrect answer'
@@ -63,9 +73,14 @@ def notebook_3_check_answer(question_number):
             print('Incorrect answer :(')   
 
 ###==================NOTEBOOK 4=====================
-def notebook_4_check_answer(question_number):
-
+def notebook_4(question_number,arguments):
+    """This function checks the answers for notebook 4.
+    It takes two arguments:
+    - question_number: the question number to check
+    - arguments: a list of arguments to pass to the function"""
+    
     if question_number == 0:
+        get_display_temperature=arguments[0]
         try:
             assert get_display_temperature(
                 [100]) == [
@@ -76,6 +91,7 @@ def notebook_4_check_answer(question_number):
             print('Incorrect answer :(')
 
     elif question_number == 1:
+        prepare_template=arguments[0]
         default_bands = ['B1', 'B2', 'B3', 'B4', 
                          'B5', 'B6', 'B7']
         d1 = prepare_template(default_bands, 'normal')
@@ -90,58 +106,11 @@ def notebook_4_check_answer(question_number):
         except AssertionError:
             print('Incorrect answer :(')
 
-###==================SOLUTIONS TEMPLATE=====================
-
-###---------QUESTION 0 --------
-# import time
-
-# def get_display_temperature(temp_k):
-#     #copying temporarily temp_k to temp_c
-#     temp_c = temp_k.copy()
-    
-#     #converting kelvins to celsius
-#     for i in range(len(temp_c)):
-#         temp_c[i] = temp_c[i] - 273.15
-        
-#     #copying temporarily temp_k to temp_f
-#     temp_f = temp_k.copy()
-    
-#     #converting kelvins to fahrenheit
-#     for i in range(len(temp_f)):
-#         temp_f[i] = (temp_f[i] - 273.15) * (9 / 5) + 32
-    
-#     #now, creating display messages from the converted temperatures
-#     display_messages = []
-#     for i in range(len(temp_k)):
-#         msg = f"{temp_c[i]:<10.3f}°C | {temp_f[i]:<10.3f}°F (ID={i})"
-#         display_messages.append(msg)
-        
-#     return display_messages
-###------------END SOLUTION---------------------
-
-###---------QUESTION 1 --------
-# def prepare_template(default_bands, observation_mode):  
-#     #creating metadata for the upcoming observations
-#     template = {'time': time.ctime(time.time()),
-#                'observation_mode': observation_mode,
-#                'bands': default_bands.copy()}
-    
-#     #adding additional bands for the extended mode
-#     if observation_mode == 'normal':
-#         #no need to add bands
-#         pass
-#     elif observation_mode == 'extended':
-#         template['bands'] += ['B8', 'B8A']
-#     else:
-#         #if the mode is unknonw - raise a RuntimeError
-#         raise RuntimeError(f'Failed to identify observation mode: {observation_mode}')
-        
-#     return template
-###------------END SOLUTION---------------------       
-# 
-###===========================================================
 
 ###==================NOTEBOOK 6=====================
+
+file_location = ("https://raw.githubusercontent.com/TUDelft-CITG/"
+                "learn-python/mike/book/06/Exercises/")
 
 def solution_6_2_1(series):
     series_types = "Types inside series:\n"
@@ -150,9 +119,14 @@ def solution_6_2_1(series):
         series_types += str(item_type) + '\n'
     return series_types
 
-def notebook_6_check_answer(question_number):
+def notebook_6(question_number,arguments):
+    """This function checks the answers for notebook 6.
+    It takes two arguments:
+    - question_number: the question number to check
+    - arguments: a list of arguments to pass to the function"""
 
     if question_number == 0:
+        list_types = arguments[0]
         my_list = ['begin', 2, 3/4, "end"]
         my_series = pd.Series(data=my_list)
         try: 
@@ -164,6 +138,8 @@ def notebook_6_check_answer(question_number):
             print('Incorrect answer :(')
 
     elif question_number == 1:
+        count_nans = arguments[0]
+        mineral_properties=arguments[1]
         try: 
             assert count_nans(
                 mineral_properties) == 12,'Incorrect'
@@ -172,6 +148,8 @@ def notebook_6_check_answer(question_number):
             print('Incorrect answer :(')
 
     elif question_number == 2:
+        count_minerals = arguments[0]
+        mineral_properties=arguments[1]
         try: 
             assert count_minerals(
                 mineral_properties, 4) == 7, 'Incorrect'
@@ -180,6 +158,12 @@ def notebook_6_check_answer(question_number):
             print('Incorrect answer :(')
     
     elif question_number == 3:
+        mountains_8000 = arguments[0]
+        cols = arguments[1]
+        max_height = arguments[2]
+        index_max = arguments[3]
+        tallest_mountain = arguments[4]
+
         df_sol = pd.read_csv(file_location + 'tallest_mountains.csv')
         cols_sol = df_sol.columns
         max_height_sol = df_sol['Metres'].max() 
@@ -196,6 +180,8 @@ def notebook_6_check_answer(question_number):
             print('Incorrect answer :(')
 
     elif question_number == 4:
+        df_reset = arguments[0]
+
         df_sol = pd.read_csv(file_location + 'tallest_mountains.csv')
 
         df7000_sol = pd.read_csv(
@@ -225,6 +211,7 @@ def notebook_6_check_answer(question_number):
             print('Incorrect answer :(')
 
     elif question_number == 5:
+        china_mountains = arguments[0]
         df_sol = pd.read_csv(file_location + 'tallest_mountains.csv')
 
         df7000_sol = pd.read_csv(
