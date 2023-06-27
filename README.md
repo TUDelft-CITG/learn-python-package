@@ -8,7 +8,7 @@ A Python package for validating online course _Learn Python for Civil Engineerin
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the last stable version of the package. 
 
 ```bash
-pip install learn-python-ceg-check
+pip install learn-python-check
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ The package allows for evaluating the answers to the exercises in sections 3, 4 
 #### Demo of some of the features:
 
 ```python
-import learn_python_ceg_check.check_answers as check
+import learn_python_check.check_answers as check
 
 check.notebook_3(question_number=0, arguments=[car_info, message])
 
