@@ -4,4 +4,4 @@
 
 In this repository the functions to check answers of the jupyterbook learn pyhton ceg are hosted. 
 ---
-M i k e ! ! ! 
+M a g i c   M i k e ! ! ! 
