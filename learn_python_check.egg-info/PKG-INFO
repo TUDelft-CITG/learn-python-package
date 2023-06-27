@@ -1,3 +1,25 @@
+Metadata-Version: 2.1
+Name: learn-python-check
+Version: 1.0.0
+Summary: learn python check answers
+Home-page: https://github.com/TUDelft-CITG/learn-python-package
+Download-URL: https://github.com/TUDelft-CITG/learn-python-package/archive/refs/tags/v1.0.0.tar.gz
+Author: Miguel Angel Mendoza-Lugo, Robert Lanzafame, Ahmed Farahat
+Author-email: m.a.mendozalugo@tudelft.nl
+License: GNU
+Project-URL: Bug Tracker, https://github.com/TUDelft-CITG/learn-python-package/issues
+Keywords: pypi
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Documentation
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
  <img src="https://raw.githubusercontent.com/TUDelft-CITG/learn-python/main/book/figures/learn-python-logo.png" width=80/> 
 
 # Learn Python for Civil Engineering and Geoscience check answers
